@@ -1,14 +1,18 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://widget/ButtonMainMenu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Page.gd" type="Script" id=2]
 
 [node name="PageModel" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 
 [node name="BackGround" type="Node" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="BackGround"]
-margin_right = 1024.0
-margin_bottom = 600.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Front" type="Node" parent="."]
@@ -16,29 +20,34 @@ color = Color( 0, 0, 0, 1 )
 [node name="ColorRect" type="ColorRect" parent="Front"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 1016.0
+margin_right = 1912.0
 margin_bottom = 120.0
+
+[node name="Button" parent="Front" instance=ExtResource( 1 )]
+script = null
 
 [node name="Body" type="Node" parent="."]
 
 [node name="ColorRect1" type="ColorRect" parent="Body"]
 margin_left = 8.0
 margin_top = 128.0
-margin_right = 504.0
-margin_bottom = 552.0
+margin_right = 952.0
+margin_bottom = 1032.0
 rect_pivot_offset = Vector2( 416, 304 )
 
 [node name="ColorRect2" type="ColorRect" parent="Body"]
-margin_left = 520.0
+margin_left = 968.0
 margin_top = 128.0
-margin_right = 1016.0
-margin_bottom = 552.0
+margin_right = 1912.0
+margin_bottom = 1032.0
 rect_pivot_offset = Vector2( 416, 304 )
 
 [node name="Bottom" type="Node" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Bottom"]
 margin_left = 8.0
-margin_top = 560.0
-margin_right = 1016.0
-margin_bottom = 592.0
+margin_top = 1040.0
+margin_right = 1912.0
+margin_bottom = 1072.0
+
+[connection signal="pressed" from="Front/Button" to="." method="_on_Button_pressed"]
