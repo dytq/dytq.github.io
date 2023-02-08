@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://widget/ButtonMainMenu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Page.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [node name="PageModel" type="Control"]
 anchor_right = 1.0
@@ -18,36 +19,99 @@ color = Color( 0, 0, 0, 1 )
 [node name="Front" type="Node" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Front"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 1912.0
-margin_bottom = 120.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 1904.0
+margin_bottom = 192.0
 
 [node name="Button" parent="Front" instance=ExtResource( 1 )]
-script = null
+margin_left = 40.0
+margin_top = 56.0
+margin_right = 152.0
+margin_bottom = 76.0
+
+[node name="Label" type="Label" parent="Front"]
+margin_left = 800.0
+margin_top = 40.0
+margin_right = 840.0
+margin_bottom = 54.0
+rect_scale = Vector2( 10, 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Title"
 
 [node name="Body" type="Node" parent="."]
 
-[node name="ColorRect1" type="ColorRect" parent="Body"]
-margin_left = 8.0
-margin_top = 128.0
+[node name="Description" type="Node" parent="Body"]
+
+[node name="ColorRect1" type="ColorRect" parent="Body/Description"]
+margin_left = 16.0
+margin_top = 208.0
 margin_right = 952.0
-margin_bottom = 1032.0
+margin_bottom = 1000.0
 rect_pivot_offset = Vector2( 416, 304 )
 
-[node name="ColorRect2" type="ColorRect" parent="Body"]
+[node name="Title" type="Label" parent="Body/Description"]
+margin_left = 400.0
+margin_top = 216.0
+margin_right = 428.0
+margin_bottom = 230.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Title"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Body/Description"]
+margin_left = 40.0
+margin_top = 288.0
+margin_right = 262.0
+margin_bottom = 462.0
+rect_scale = Vector2( 4, 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx
+xxxxxxxxxxxxxx"
+
+[node name="Image" type="Node" parent="Body"]
+
+[node name="ColorRect2" type="ColorRect" parent="Body/Image"]
 margin_left = 968.0
-margin_top = 128.0
-margin_right = 1912.0
-margin_bottom = 1032.0
+margin_top = 208.0
+margin_right = 1904.0
+margin_bottom = 1000.0
 rect_pivot_offset = Vector2( 416, 304 )
+
+[node name="TextureRect" type="TextureRect" parent="Body/Image"]
+margin_left = 984.0
+margin_top = 224.0
+margin_right = 1888.0
+margin_bottom = 984.0
+texture = ExtResource( 3 )
+expand = true
 
 [node name="Bottom" type="Node" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Bottom"]
-margin_left = 8.0
-margin_top = 1040.0
-margin_right = 1912.0
-margin_bottom = 1072.0
+margin_left = 16.0
+margin_top = 1016.0
+margin_right = 1904.0
+margin_bottom = 1064.0
 
 [connection signal="pressed" from="Front/Button" to="." method="_on_Button_pressed"]
