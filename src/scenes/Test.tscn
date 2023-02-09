@@ -1,17 +1,17 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scripts/MainPage.gd" type="Script" id=1]
-[ext_resource path="res://scripts/ViewportContainer.gd" type="Script" id=2]
-[ext_resource path="res://font/Andada Pro 500.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://scripts/Test.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://font/Andada Pro 500.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=3]
 size = 50
-font_data = ExtResource( 5 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 50
 outline_color = Color( 1, 0, 0, 1 )
-font_data = ExtResource( 5 )
+font_data = ExtResource( 3 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -31,8 +31,8 @@ size_flags_vertical = 3
 follow_focus = true
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
-margin_right = 504.0
-margin_bottom = 556.0
+margin_right = 1024.0
+margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -83,10 +83,13 @@ margin_bottom = 437.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_fonts/normal_font = SubResource( 2 )
-text = "iujkjkljlj
-kjlj
-kljlj
-klkjk
+text = "xxxxxxxxx
+xxxxxxxxx
+xxxxxxxxx
+xxxxxxxxx
+xxxxxxxxx
+xxxxxxxxx
+xxxxxxxxx
 "
 
 [node name="PanelContainer2" type="PanelContainer" parent="ScrollContainer/GridContainer/GridContainer"]
@@ -97,12 +100,13 @@ rect_min_size = Vector2( 200, 400 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer2"]
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer2"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 503.0
 margin_bottom = 437.0
-text = "test"
+texture = ExtResource( 2 )
+expand = true
 
 [node name="PanelContainer2" type="PanelContainer" parent="ScrollContainer/GridContainer"]
 margin_top = 552.0
@@ -117,16 +121,11 @@ margin_top = 7.0
 margin_right = 1017.0
 margin_bottom = 41.0
 
-[node name="ViewportContainer" type="ViewportContainer" parent="."]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-stretch = true
-script = ExtResource( 2 )
+[node name="Button" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 96.0
+margin_bottom = 48.0
+text = "retour au menu"
 
-[node name="Viewport" type="Viewport" parent="ViewportContainer"]
-size = Vector2( 1024, 600 )
-handle_input_locally = false
-render_target_update_mode = 0
-
-[connection signal="pressed" from="ScrollContainer/GridContainer/GridContainer/PanelContainer2/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

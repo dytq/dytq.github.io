@@ -1,23 +1,30 @@
 extends Control
 
-var example_page = load("res://scenes/Page.tscn")
+var test_page = load("res://scenes/Test.tscn")
 
 var current_scn = null
 
 func _ready():
 	pass
 
-func _on_Button_pressed():
-	if(current_scn != null):
-		remove_viewport_scene()
-	current_scn = example_page.instance()
-	current_scn.connect("return_to_menu",self,"return_to_menu")
-	$ViewportContainer/Viewport.add_child(current_scn)
-	$Camera2D.target_position = Vector2(1920, $Camera2D.position.y)
-
 func return_to_menu():
-	$Camera2D.target_position.x = 0
+	$ViewportContainer.set_undisplay(Vector2(OS.window_size.x,0))
+	
 
 func remove_viewport_scene():
-	$ViewportContainer/Viewport.remove_child(current_scn)
-	current_scn.queue_free()
+	if(current_scn != null):
+		$GridContainer/GridContainer2/ViewportContainer/Viewport.remove_child(current_scn)
+		current_scn.queue_free()
+
+func _on_Button_pressed():
+	var my_page = test_page.instance()
+	my_page.connect("return_to_menu", self, "return_to_menu")
+	$ViewportContainer/Viewport.add_child(my_page)
+	$ViewportContainer.set_display(Vector2(0,0),Vector2(OS.window_size.x,0))
+
+func _process(delta):
+	if(OS.window_size.x < 600):
+		$ScrollContainer/GridContainer/GridContainer.columns = 1
+	else:
+		$ScrollContainer/GridContainer/GridContainer.columns = 2
+
