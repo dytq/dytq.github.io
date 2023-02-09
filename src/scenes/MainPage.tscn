@@ -1,15 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/MainPage.gd" type="Script" id=1]
 [ext_resource path="res://scripts/ViewportContainer.gd" type="Script" id=2]
 [ext_resource path="res://font/Andada Pro 500.ttf" type="DynamicFontData" id=5]
 
-[sub_resource type="DynamicFont" id=3]
-size = 50
-font_data = ExtResource( 5 )
-
 [sub_resource type="DynamicFont" id=2]
-size = 50
+size = 15
 outline_color = Color( 1, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
@@ -31,34 +27,25 @@ size_flags_vertical = 3
 follow_focus = true
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
-margin_right = 504.0
-margin_bottom = 556.0
+margin_right = 1024.0
+margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/GridContainer"]
+[node name="Front" type="PanelContainer" parent="ScrollContainer/GridContainer"]
 margin_right = 1024.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 200, 100 )
 size_flags_horizontal = 3
 
-[node name="Panel" type="Panel" parent="ScrollContainer/GridContainer/PanelContainer"]
+[node name="Panel" type="Panel" parent="ScrollContainer/GridContainer/Front"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 1017.0
 margin_bottom = 93.0
 rect_clip_content = true
 
-[node name="Label" type="Label" parent="ScrollContainer/GridContainer/PanelContainer"]
-margin_left = 7.0
-margin_top = 20.0
-margin_right = 1017.0
-margin_bottom = 80.0
-custom_fonts/font = SubResource( 3 )
-text = "TITLE"
-align = 1
-
-[node name="GridContainer" type="GridContainer" parent="ScrollContainer/GridContainer"]
+[node name="Body" type="GridContainer" parent="ScrollContainer/GridContainer"]
 margin_top = 104.0
 margin_right = 1024.0
 margin_bottom = 548.0
@@ -66,30 +53,77 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/GridContainer/GridContainer"]
+[node name="LeftSide" type="PanelContainer" parent="ScrollContainer/GridContainer/Body"]
 margin_right = 510.0
 margin_bottom = 444.0
 rect_min_size = Vector2( 300, 400 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Panel" type="Panel" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer"]
+[node name="Panel" type="Panel" parent="ScrollContainer/GridContainer/Body/LeftSide"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 503.0
 margin_bottom = 437.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 17.0
+margin_top = 17.0
+margin_right = -10.0
+margin_bottom = -246.0
+rect_rotation = 0.0686845
 custom_fonts/normal_font = SubResource( 2 )
-text = "iujkjkljlj
-kjlj
-kljlj
-klkjk
-"
+text = "A propos:
+Je suis Dedarally Taariq, étudiant en informatique à l'Université 
+de Paris Saclay. 
+- Intérêts: 
+ - Système, configuration Linux 
+ - Le réseau informatique et configuration
+ - Sécurité 
+ - Programmation et développement"
 
-[node name="PanelContainer2" type="PanelContainer" parent="ScrollContainer/GridContainer/GridContainer"]
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
+margin_left = 17.0
+margin_top = 185.0
+margin_right = 59.0
+margin_bottom = 201.0
+text = "Liens: "
+
+[node name="ButtonCodinGame" type="Button" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
+margin_left = 17.0
+margin_top = 209.0
+margin_right = 110.0
+margin_bottom = 229.0
+rect_pivot_offset = Vector2( 80, 16 )
+text = "codingame"
+
+[node name="Buttonrootme" type="Button" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
+margin_left = 17.0
+margin_top = 273.0
+margin_right = 110.0
+margin_bottom = 293.0
+rect_pivot_offset = Vector2( 80, 16 )
+text = "rootme"
+
+[node name="Buttongithub" type="Button" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
+margin_left = 17.0
+margin_top = 241.0
+margin_right = 110.0
+margin_bottom = 261.0
+rect_pivot_offset = Vector2( 80, 16 )
+text = "github"
+
+[node name="Buttontryhackme" type="Button" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
+margin_left = 17.0
+margin_top = 305.0
+margin_right = 110.0
+margin_bottom = 325.0
+rect_pivot_offset = Vector2( 80, 16 )
+text = "tryhackme"
+
+[node name="RightSide" type="PanelContainer" parent="ScrollContainer/GridContainer/Body"]
 margin_left = 514.0
 margin_right = 1024.0
 margin_bottom = 444.0
@@ -97,21 +131,59 @@ rect_min_size = Vector2( 200, 400 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer2"]
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/GridContainer/Body/RightSide"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 503.0
 margin_bottom = 437.0
-text = "test"
 
-[node name="PanelContainer2" type="PanelContainer" parent="ScrollContainer/GridContainer"]
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer"]
+margin_right = 496.0
+margin_bottom = 14.0
+text = "Mes projets triés par thèmes:"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer"]
+margin_top = 18.0
+margin_right = 496.0
+margin_bottom = 430.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer"]
+margin_right = 155.0
+margin_bottom = 92.0
+
+[node name="ButtonIA" type="Button" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer/GridContainer"]
+margin_right = 155.0
+margin_bottom = 20.0
+text = "IA"
+
+[node name="ButtonSecurite" type="Button" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer/GridContainer"]
+margin_top = 24.0
+margin_right = 155.0
+margin_bottom = 44.0
+text = "Sécurité"
+
+[node name="ButtonReseauSysteme" type="Button" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer/GridContainer"]
+margin_top = 48.0
+margin_right = 155.0
+margin_bottom = 68.0
+text = "Réseau et Système"
+
+[node name="ButtonJeuetDev" type="Button" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer/GridContainer"]
+margin_top = 72.0
+margin_right = 155.0
+margin_bottom = 92.0
+text = "Jeu et Développement"
+
+[node name="Foot" type="PanelContainer" parent="ScrollContainer/GridContainer"]
 margin_top = 552.0
 margin_right = 1024.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 300, 48 )
 size_flags_horizontal = 3
 
-[node name="Panel" type="Panel" parent="ScrollContainer/GridContainer/PanelContainer2"]
+[node name="Panel" type="Panel" parent="ScrollContainer/GridContainer/Foot"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 1017.0
@@ -129,4 +201,11 @@ size = Vector2( 1024, 600 )
 handle_input_locally = false
 render_target_update_mode = 0
 
-[connection signal="pressed" from="ScrollContainer/GridContainer/GridContainer/PanelContainer2/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/Body/LeftSide/Panel/ButtonCodinGame" to="." method="_on_ButtonCodinGame_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/Body/LeftSide/Panel/Buttonrootme" to="." method="_on_Buttonrootme_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/Body/LeftSide/Panel/Buttongithub" to="." method="_on_Buttongithub_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/Body/LeftSide/Panel/Buttontryhackme" to="." method="_on_Buttontryhackme_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer/GridContainer/ButtonIA" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer/GridContainer/ButtonSecurite" to="." method="_on_ButtonSecurite_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer/GridContainer/ButtonReseauSysteme" to="." method="_on_ButtonReseauSysteme_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer/GridContainer/ButtonJeuetDev" to="." method="_on_ButtonJeuetDev_pressed"]

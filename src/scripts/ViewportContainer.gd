@@ -17,9 +17,7 @@ func set_display(target_position_entry, rect_position_entry):
 	self.rect_position = rect_position_entry
 	self.target_position = target_position_entry
 	is_display = true
-	print("show")
 
 func set_undisplay(target_position_entry):
 	self.target_position = target_position_entry
 	is_display = false
-	print("begin hide")
