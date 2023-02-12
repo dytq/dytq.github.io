@@ -31,16 +31,16 @@ func _process(delta):
 
 # URL
 func _on_ButtonCodinGame_pressed():
-	pass # Replace with function body.
+	OS.shell_open("https://www.codingame.com/profile/9225aa702270c7aeae544e96f72dd7b51131513")
 
 func _on_Buttonrootme_pressed():
-	pass # Replace with function body.
+	OS.shell_open("https://www.root-me.org/dytq?lang=fr#0d377b7ef72617e4dfeae258abfcf389")
 
 func _on_Buttongithub_pressed():
-	pass # Replace with function body.
+	OS.shell_open("https://github.com/dytq")
 
 func _on_Buttontryhackme_pressed():
-	pass # Replace with function body.
+	OS.shell_open("https://tryhackme.com/p/dytq")
 	
 # Pages 
 func _on_Button_pressed():

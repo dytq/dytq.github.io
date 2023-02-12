@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scripts/Test.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Securite.gd" type="Script" id=1]
 [ext_resource path="res://Illustration/RSA.jpg" type="Texture" id=2]
 [ext_resource path="res://font/Andada Pro 500.ttf" type="DynamicFontData" id=3]
 
@@ -125,32 +125,32 @@ margin_right = 9.0
 margin_bottom = 19.0
 custom_fonts/normal_font = SubResource( 2 )
 
-[node name="Button" type="Button" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel"]
+[node name="ButtonRSA" type="Button" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel"]
 margin_left = 9.0
 margin_top = 105.0
 margin_right = 110.0
 margin_bottom = 130.0
 text = "Lien du projet"
 
-[node name="Button2" type="Button" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel"]
+[node name="ButtonDES1" type="Button" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel"]
 margin_left = 9.0
 margin_top = 225.0
 margin_right = 110.0
 margin_bottom = 250.0
 text = "Lien du projet"
 
-[node name="Button4" type="Button" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel"]
-margin_left = 9.0
-margin_top = 345.0
-margin_right = 110.0
-margin_bottom = 370.0
-text = "Lien du projet"
-
-[node name="Button3" type="Button" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel"]
+[node name="ButtonDES2" type="Button" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel"]
 margin_left = 121.0
 margin_top = 225.0
 margin_right = 222.0
 margin_bottom = 250.0
+text = "Lien du projet"
+
+[node name="ButtonAES" type="Button" parent="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel"]
+margin_left = 9.0
+margin_top = 345.0
+margin_right = 110.0
+margin_bottom = 370.0
 text = "Lien du projet"
 
 [node name="PanelContainer2" type="PanelContainer" parent="ScrollContainer/GridContainer/GridContainer"]
@@ -189,4 +189,8 @@ margin_right = 96.0
 margin_bottom = 48.0
 text = "retour au menu"
 
+[connection signal="pressed" from="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel/ButtonRSA" to="." method="_on_ButtonRSA_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel/ButtonDES1" to="." method="_on_ButtonDES1_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel/ButtonDES2" to="." method="_on_ButtonDES2_pressed"]
+[connection signal="pressed" from="ScrollContainer/GridContainer/GridContainer/PanelContainer/Panel/ButtonAES" to="." method="_on_ButtonAES_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

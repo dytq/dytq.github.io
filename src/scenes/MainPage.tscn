@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/MainPage.gd" type="Script" id=1]
 [ext_resource path="res://scripts/ViewportContainer.gd" type="Script" id=2]
@@ -8,6 +8,8 @@
 size = 15
 outline_color = Color( 1, 0, 0, 1 )
 font_data = ExtResource( 5 )
+
+[sub_resource type="Theme" id=3]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -175,6 +177,7 @@ text = "Réseau et Système"
 margin_top = 72.0
 margin_right = 155.0
 margin_bottom = 92.0
+theme = SubResource( 3 )
 text = "Jeu et Développement"
 
 [node name="Foot" type="PanelContainer" parent="ScrollContainer/GridContainer"]
@@ -201,6 +204,8 @@ script = ExtResource( 2 )
 size = Vector2( 1024, 600 )
 handle_input_locally = false
 render_target_update_mode = 0
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [connection signal="pressed" from="ScrollContainer/GridContainer/Body/LeftSide/Panel/ButtonCodinGame" to="." method="_on_ButtonCodinGame_pressed"]
 [connection signal="pressed" from="ScrollContainer/GridContainer/Body/LeftSide/Panel/Buttonrootme" to="." method="_on_Buttonrootme_pressed"]
