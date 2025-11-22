@@ -1,0 +1,38 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1763836174
+default_env.tres::Environment::4755187471010661721::1763835902::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1763835927::0::1::::<><><>0<>0<><>::
+icon.png::CompressedTexture2D::806761852084756161::1763835440::1763835620::1::::<><><>0<>0<>b4300257b4d32fd041b3772f22ae9b96<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
+::res://font/::1763835620
+Andada Pro 500.ttf::FontFile::3780534619218445323::1763835440::1763835620::1::::<><><>0<>0<>3f3801d80cf5da62f1c69251f1d51d69<>res://.godot/imported/Andada Pro 500.ttf-535f3c3b62afcc2129e40c2d2911e382.fontdata::
+Andada Pro 500italic.ttf::FontFile::3095888697777988129::1763835440::1763835620::1::::<><><>0<>0<>d01eb9536148187ee4c63bbb2467589a<>res://.godot/imported/Andada Pro 500italic.ttf-25de85a9cc084455f76c2a933a61bb01.fontdata::
+Andada Pro 600.ttf::FontFile::9006865527709894190::1763835440::1763835620::1::::<><><>0<>0<>64880142a4b8f10db8517a9637c28cdf<>res://.godot/imported/Andada Pro 600.ttf-881671f106732bcc9fe14119d244c435.fontdata::
+Andada Pro 600italic.ttf::FontFile::4978001730133602245::1763835440::1763835620::1::::<><><>0<>0<>dc3d5074a7133305a0dca88fbde5e0f5<>res://.godot/imported/Andada Pro 600italic.ttf-19a1a92ba710babfcbf8428b70b6e423.fontdata::
+Andada Pro 700.ttf::FontFile::2069072640361610266::1763835440::1763835620::1::::<><><>0<>0<>0816aa5e9149225ffb1655319933a2aa<>res://.godot/imported/Andada Pro 700.ttf-061aa56a21333ca44f4adcaf01d3bd9e.fontdata::
+Andada Pro 700italic.ttf::FontFile::8371378557154555548::1763835440::1763835620::1::::<><><>0<>0<>4c3bef09c5ccd7780d4a114a78df8b54<>res://.godot/imported/Andada Pro 700italic.ttf-425b8578856683cf1d1888d73e6539c1.fontdata::
+Andada Pro 800.ttf::FontFile::6291230328960709466::1763835440::1763835620::1::::<><><>0<>0<>f082dbb038db87bd04ec6686b4edfc49<>res://.godot/imported/Andada Pro 800.ttf-be95de36cb60ab0e46b45a6d0b175ca6.fontdata::
+Andada Pro 800italic.ttf::FontFile::6007713267510681116::1763835440::1763835620::1::::<><><>0<>0<>8c75231fac082accc075b52ddc95a3a3<>res://.godot/imported/Andada Pro 800italic.ttf-150cb275ef0a998dbb57ccc3477e039e.fontdata::
+Andada Pro italic.ttf::FontFile::1755790612286881189::1763835440::1763835620::1::::<><><>0<>0<>e1f558591669a9af5b0def45bb8a30ee<>res://.godot/imported/Andada Pro italic.ttf-dd56ba26259a983e532cd0ebdec8ce45.fontdata::
+Andada Pro regular.ttf::FontFile::5688190560830983630::1763835440::1763835620::1::::<><><>0<>0<>3b1021413efdbb950b6faa324ec4c6e7<>res://.godot/imported/Andada Pro regular.ttf-4b535dc81756649629b1bdcefcd01648.fontdata::
+::res://Illustration/::1763835620
+arch.png::CompressedTexture2D::5052681623422449519::1763835440::1763835620::1::::<><><>0<>0<>79c4335767e5ceef361c18375b71fdf5<>res://.godot/imported/arch.png-c109454dc2f2153c6ced908c6aded483.ctex::
+Carcassonne.png::CompressedTexture2D::9093261409293386924::1763835440::1763835620::1::::<><><>0<>0<>7badbcb87b0f921ce7dfc5bceaf512a0<>res://.godot/imported/Carcassonne.png-9097a435d917b16b13aaac9eb3348713.ctex::
+RSA.jpg::CompressedTexture2D::416723567691775201::1763835440::1763835620::1::::<><><>0<>0<>4c5ec083dbedd3bbbf29dfa61c108c2d<>res://.godot/imported/RSA.jpg-6b3ff9643044f9b93cbf0167c224391d.ctex::
+SpaceAdventure.png::CompressedTexture2D::3590387287138231543::1763835440::1763835620::1::::<><><>0<>0<>e5573f1cee7b1336271470f9f4e94144<>res://.godot/imported/SpaceAdventure.png-8b0e36105ba351ac7c526740e5019e5a.ctex::
+::res://Pages/::1763835440
+IA.tscn::PackedScene::-1::1763835606::0::1::::<><><>0<>0<><>::res://scripts/IA.gd<>res://Illustration/Carcassonne.png<>res://font/Andada Pro 500.ttf
+JeuEtDev.tscn::PackedScene::-1::1763835606::0::1::::<><><>0<>0<><>::res://scripts/JeuEtDev.gd<>res://Illustration/SpaceAdventure.png<>res://font/Andada Pro 500.ttf
+ReseauEtSystem.tscn::PackedScene::-1::1763835606::0::1::::<><><>0<>0<><>::res://scripts/Test.gd<>res://Illustration/arch.png<>res://font/Andada Pro 500.ttf
+Securite.tscn::PackedScene::-1::1763835606::0::1::::<><><>0<>0<><>::res://scripts/Securite.gd<>res://Illustration/RSA.jpg<>res://font/Andada Pro 500.ttf
+::res://scenes/::1763835902
+MainPage.tscn::PackedScene::8742483271647826404::1763835902::0::1::::<><><>0<>0<><>::uid://uwvcnua26rw5::::res://scripts/MainPage.gd<>uid://cv1brkdmlvwiw::::res://scripts/ViewportContainer.gd
+Test.tscn::PackedScene::-1::1763835606::0::1::::<><><>0<>0<><>::res://scripts/Test.gd<>res://icon.png<>res://font/Andada Pro 500.ttf
+::res://scripts/::1763835620
+IA.gd::GDScript::7251660441671757961::1763835606::0::1::::<>Control<><>0<>0<><>::
+JeuEtDev.gd::GDScript::741128050536859274::1763835606::0::1::::<>Control<><>0<>0<><>::
+MainPage.gd::GDScript::1450472525522828406::1763835606::0::1::::<>Control<><>0<>0<><>::
+Securite.gd::GDScript::8296965845274965662::1763835606::0::1::::<>Control<><>0<>0<><>::
+Test.gd::GDScript::4618481103522457674::1763835606::0::1::::<>Control<><>0<>0<><>::
+ViewportContainer.gd::GDScript::6300572511308276630::1763835606::0::1::::<>SubViewportContainer<><>0<>0<><>::
+::res://widget/::1763835440
+ButtonMainMenu.tscn::PackedScene::-1::1763835606::0::1::::<><><>0<>0<><>::

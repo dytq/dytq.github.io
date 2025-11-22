@@ -1,83 +1,110 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://dws6omb2mm52w"]
 
-[ext_resource path="res://scripts/MainPage.gd" type="Script" id=1]
-[ext_resource path="res://scripts/ViewportContainer.gd" type="Script" id=2]
-[ext_resource path="res://font/Andada Pro 500.ttf" type="DynamicFontData" id=5]
+[ext_resource type="Script" uid="uid://uwvcnua26rw5" path="res://scripts/MainPage.gd" id="1"]
+[ext_resource type="Script" uid="uid://cv1brkdmlvwiw" path="res://scripts/ViewportContainer.gd" id="2"]
 
-[sub_resource type="DynamicFont" id=2]
-size = 15
-outline_color = Color( 1, 0, 0, 1 )
-font_data = ExtResource( 5 )
-
-[sub_resource type="Theme" id=3]
+[sub_resource type="Theme" id="3"]
 
 [node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="Panel" type="Panel" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
+clip_contents = false
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_clip_content = false
-mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 follow_focus = true
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
-margin_right = 1024.0
-margin_bottom = 600.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Front" type="PanelContainer" parent="ScrollContainer/GridContainer"]
-margin_right = 1024.0
-margin_bottom = 100.0
-rect_min_size = Vector2( 200, 100 )
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Panel" type="Panel" parent="ScrollContainer/GridContainer/Front"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 1017.0
-margin_bottom = 93.0
-rect_clip_content = true
+clip_contents = true
+layout_mode = 2
 
 [node name="Body" type="GridContainer" parent="ScrollContainer/GridContainer"]
-margin_top = 104.0
-margin_right = 1024.0
-margin_bottom = 548.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 2
 
 [node name="LeftSide" type="PanelContainer" parent="ScrollContainer/GridContainer/Body"]
-margin_right = 510.0
-margin_bottom = 444.0
-rect_min_size = Vector2( 300, 400 )
+custom_minimum_size = Vector2(300, 400)
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Panel" type="Panel" parent="ScrollContainer/GridContainer/Body/LeftSide"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 503.0
-margin_bottom = 437.0
+layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 17.0
-margin_top = 17.0
-margin_right = -10.0
-margin_bottom = -246.0
-rect_rotation = 0.0686845
-custom_fonts/normal_font = SubResource( 2 )
+[node name="Label" type="Label" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 200.0
+offset_right = 63.0
+offset_bottom = 223.0
+text = "Liens: "
+
+[node name="ButtonCodinGame" type="Button" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 231.0
+offset_right = 104.0
+offset_bottom = 262.0
+pivot_offset = Vector2(80, 16)
+text = "codingame"
+
+[node name="Buttonrootme" type="Button" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 295.0
+offset_right = 104.0
+offset_bottom = 326.0
+pivot_offset = Vector2(80, 16)
+text = "rootme"
+
+[node name="Buttongithub" type="Button" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 263.0
+offset_right = 104.0
+offset_bottom = 294.0
+pivot_offset = Vector2(80, 16)
+text = "github"
+
+[node name="Buttontryhackme" type="Button" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 327.0
+offset_right = 104.0
+offset_bottom = 358.0
+pivot_offset = Vector2(80, 16)
+text = "tryhackme"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 565.0
+offset_bottom = 204.0
 text = "A propos:
 Je suis Dedarally Taariq, étudiant en informatique à l'Université 
 de Paris Saclay. 
@@ -85,124 +112,66 @@ de Paris Saclay.
  - Système, configuration Linux 
  - Le réseau informatique et configuration
  - Sécurité 
- - Programmation et développement"
-
-[node name="Label" type="Label" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
-margin_left = 17.0
-margin_top = 185.0
-margin_right = 59.0
-margin_bottom = 201.0
-text = "Liens: "
-
-[node name="ButtonCodinGame" type="Button" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
-margin_left = 17.0
-margin_top = 209.0
-margin_right = 110.0
-margin_bottom = 229.0
-rect_pivot_offset = Vector2( 80, 16 )
-text = "codingame"
-
-[node name="Buttonrootme" type="Button" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
-margin_left = 17.0
-margin_top = 273.0
-margin_right = 110.0
-margin_bottom = 293.0
-rect_pivot_offset = Vector2( 80, 16 )
-text = "rootme"
-
-[node name="Buttongithub" type="Button" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
-margin_left = 17.0
-margin_top = 241.0
-margin_right = 110.0
-margin_bottom = 261.0
-rect_pivot_offset = Vector2( 80, 16 )
-text = "github"
-
-[node name="Buttontryhackme" type="Button" parent="ScrollContainer/GridContainer/Body/LeftSide/Panel"]
-margin_left = 17.0
-margin_top = 305.0
-margin_right = 110.0
-margin_bottom = 325.0
-rect_pivot_offset = Vector2( 80, 16 )
-text = "tryhackme"
+ - Programmation et développement
+"
 
 [node name="RightSide" type="PanelContainer" parent="ScrollContainer/GridContainer/Body"]
-margin_left = 514.0
-margin_right = 1024.0
-margin_bottom = 444.0
-rect_min_size = Vector2( 200, 400 )
+custom_minimum_size = Vector2(200, 400)
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer/GridContainer/Body/RightSide"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 503.0
-margin_bottom = 437.0
+layout_mode = 2
 
 [node name="Label" type="Label" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer"]
-margin_right = 496.0
-margin_bottom = 14.0
+layout_mode = 2
 text = "Mes projets triés par thèmes:"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer"]
-margin_top = 18.0
-margin_right = 496.0
-margin_bottom = 430.0
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer"]
-margin_right = 155.0
-margin_bottom = 92.0
+layout_mode = 2
 
 [node name="ButtonIA" type="Button" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer/GridContainer"]
-margin_right = 155.0
-margin_bottom = 20.0
+layout_mode = 2
 text = "IA"
 
 [node name="ButtonSecurite" type="Button" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer/GridContainer"]
-margin_top = 24.0
-margin_right = 155.0
-margin_bottom = 44.0
+layout_mode = 2
 text = "Sécurité"
 
 [node name="ButtonReseauSysteme" type="Button" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer/GridContainer"]
-margin_top = 48.0
-margin_right = 155.0
-margin_bottom = 68.0
+layout_mode = 2
 text = "Réseau et Système"
 
 [node name="ButtonJeuetDev" type="Button" parent="ScrollContainer/GridContainer/Body/RightSide/GridContainer/ScrollContainer/GridContainer"]
-margin_top = 72.0
-margin_right = 155.0
-margin_bottom = 92.0
-theme = SubResource( 3 )
+layout_mode = 2
+theme = SubResource("3")
 text = "Jeu et Développement"
 
 [node name="Foot" type="PanelContainer" parent="ScrollContainer/GridContainer"]
-margin_top = 552.0
-margin_right = 1024.0
-margin_bottom = 600.0
-rect_min_size = Vector2( 300, 48 )
+custom_minimum_size = Vector2(300, 48)
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Panel" type="Panel" parent="ScrollContainer/GridContainer/Foot"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 1017.0
-margin_bottom = 41.0
+layout_mode = 2
 
-[node name="ViewportContainer" type="ViewportContainer" parent="."]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 visible = false
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 stretch = true
-script = ExtResource( 2 )
+script = ExtResource("2")
 
-[node name="Viewport" type="Viewport" parent="ViewportContainer"]
-size = Vector2( 1024, 600 )
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
+size = Vector2i(1152, 648)
 render_target_update_mode = 0
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]

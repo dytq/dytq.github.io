@@ -6,7 +6,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	if(OS.window_size.x < 600):
+	if(get_window().size.x < 600):
 		$ScrollContainer/GridContainer/GridContainer.columns = 1
 	else:
 		$ScrollContainer/GridContainer/GridContainer.columns = 2

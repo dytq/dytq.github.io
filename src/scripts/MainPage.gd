@@ -15,16 +15,16 @@ func _ready():
 	pass
 
 func return_to_menu():
-	$ViewportContainer.set_undisplay(Vector2(OS.window_size.x,0))
+	$SubViewportContainer.set_undisplay(Vector2(get_window().size.x,0))
 	
 
 func remove_viewport_scene():
 	if(current_scn != null):
-		$GridContainer/GridContainer2/ViewportContainer/Viewport.remove_child(current_scn)
+		$GridContainer/GridContainer2/SubViewportContainer/SubViewport.remove_child(current_scn)
 		current_scn.queue_free()
 
 func _process(delta):
-	if(OS.window_size.x < 600):
+	if(get_window().size.x < 600):
 		$ScrollContainer/GridContainer/Body.columns = 1
 	else:
 		$ScrollContainer/GridContainer/Body.columns = 2
@@ -44,25 +44,25 @@ func _on_Buttontryhackme_pressed():
 	
 # Pages 
 func _on_Button_pressed():
-	var ia = ia_page.instance()
-	ia.connect("return_to_menu", self, "return_to_menu")
-	$ViewportContainer/Viewport.add_child(ia)
-	$ViewportContainer.set_display(Vector2(0,0),Vector2(OS.window_size.x,0))
+	var ia = ia_page.instantiate()
+	ia.connect("return_to_menu", Callable(self, "return_to_menu"))
+	$SubViewportContainer/SubViewport.add_child(ia)
+	$SubViewportContainer.set_display(Vector2(0,0),Vector2(get_window().size.x,0))
 
 func _on_ButtonSecurite_pressed():
-	var secu = secu_page.instance()
-	secu.connect("return_to_menu", self, "return_to_menu")
-	$ViewportContainer/Viewport.add_child(secu)
-	$ViewportContainer.set_display(Vector2(0,0),Vector2(OS.window_size.x,0))
+	var secu = secu_page.instantiate()
+	secu.connect("return_to_menu", Callable(self, "return_to_menu"))
+	$SubViewportContainer/SubViewport.add_child(secu)
+	$SubViewportContainer.set_display(Vector2(0,0),Vector2(get_window().size.x,0))
 
 func _on_ButtonReseauSysteme_pressed():
-	var reseau = reseau_page.instance()
-	reseau.connect("return_to_menu", self, "return_to_menu")
-	$ViewportContainer/Viewport.add_child(reseau)
-	$ViewportContainer.set_display(Vector2(0,0),Vector2(OS.window_size.x,0))
+	var reseau = reseau_page.instantiate()
+	reseau.connect("return_to_menu", Callable(self, "return_to_menu"))
+	$SubViewportContainer/SubViewport.add_child(reseau)
+	$SubViewportContainer.set_display(Vector2(0,0),Vector2(get_window().size.x,0))
 
 func _on_ButtonJeuetDev_pressed():
-	var dev = dev_page.instance()
-	dev.connect("return_to_menu", self, "return_to_menu")
-	$ViewportContainer/Viewport.add_child(dev)
-	$ViewportContainer.set_display(Vector2(0,0),Vector2(OS.window_size.x,0))
+	var dev = dev_page.instantiate()
+	dev.connect("return_to_menu", Callable(self, "return_to_menu"))
+	$SubViewportContainer/SubViewport.add_child(dev)
+	$SubViewportContainer.set_display(Vector2(0,0),Vector2(get_window().size.x,0))
