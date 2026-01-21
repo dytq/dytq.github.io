@@ -1,1 +1,38 @@
 @import "tailwindcss";
+
+@layer components {
+  .site-header {
+    @apply fixed top-0 left-0 w-full z-50 bg-white shadow-md;
+  }
+
+  .navbar {
+    @apply w-full max-w-7xl;
+  }
+
+  .navbar-brand {
+    @apply font-bold text-gray-800;
+  }
+
+  .navbar-list {
+    @apply flex list-none gap-6 p-4;
+  }
+
+  .navbar-link {
+    @apply text-gray-700 transition hover:text-blue-500;
+  }
+
+  .site-footer {
+    @apply bg-white text-center;
+  }
+}
+
+@layer base {
+    h1 {
+        @apply font-bold text-3xl text-center pt-32;
+        color: navy;
+    }
+    h2 {
+        @apply font-bold text-xl;
+        color: black;
+    }
+}
