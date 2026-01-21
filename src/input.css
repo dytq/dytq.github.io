@@ -22,7 +22,7 @@
   }
 
   .site-footer {
-    @apply bg-white text-center;
+    @apply bg-blue-950 text-center text-white;
   }
 }
 
