@@ -70,7 +70,7 @@
     }
        
     h1 {
-        @apply font-bold text-3xl text-center pb-8;
+        @apply font-bold text-3xl pb-8;
         color: navy;
     }
     h2 {
