@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@layer theme {
+}
+
 @layer components {
   .site-header {
     @apply fixed top-0 left-0 w-full z-50 bg-white shadow-md;
@@ -27,6 +30,17 @@
 }
 
 @layer base {
+    header {
+      background-color: white;
+    }
+    body {
+      background-color: white;
+    }
+
+    footer {
+      background-color: navy;
+    }
+    
     h1 {
         @apply font-bold text-3xl text-center pt-32;
         color: navy;

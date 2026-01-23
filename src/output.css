@@ -174,6 +174,7 @@
   }
 }
 @layer utilities;
+@layer theme;
 @layer components {
   .site-header {
     position: fixed;
@@ -218,6 +219,15 @@
   }
 }
 @layer base {
+  header {
+    background-color: white;
+  }
+  body {
+    background-color: white;
+  }
+  footer {
+    background-color: navy;
+  }
   h1 {
     padding-top: calc(var(--spacing) * 32);
     text-align: center;
