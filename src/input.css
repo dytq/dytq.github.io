@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
+@layer theme {
+}
+
 @layer components {
+  /* Header */
   .site-header {
     @apply fixed top-0 left-0 w-full z-50 bg-white shadow-md;
   }
@@ -21,14 +25,52 @@
     @apply text-gray-700 transition hover:text-blue-500;
   }
 
+  /*  Footer */
   .site-footer {
-    @apply bg-white text-center;
+    @apply bg-blue-950 text-center text-white;
+  }
+
+  /* About */
+  .filter_img {
+    @apply absolute inset-0 bg-gray-950/70 shadow-2xl blur-md;
+  }
+
+  /* Card - Boxes */
+  .card {
+    @apply flex flex-col p-6 bg-zinc-50 border-blue-950 border-2 rounded-xl font-bold shadow-2xl hover:border-blue-600 transition delay-200;
+  }
+
+  .card-title {
+    @apply flex justify-center text-5xl font-bold text-blue-950;
+  }
+  
+  .card-desc {
+    @apply flex justify-center pt-5 font-medium text-sm font-bold text-zinc-800;
   }
 }
 
 @layer base {
+    header {
+      background-color: white;
+    }
+    body {
+      background-color: white;
+    }
+
+    footer {
+      background-color: navy;
+    }
+
+    main {
+      @apply min-h-screen max-w-5xl mx-auto px-6 md:px-2;
+    }
+
+    section {
+      @apply pt-32;
+    }
+       
     h1 {
-        @apply font-bold text-3xl text-center pt-32;
+        @apply font-bold text-3xl pb-8;
         color: navy;
     }
     h2 {
