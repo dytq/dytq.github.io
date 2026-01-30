@@ -71,11 +71,22 @@
   .box-title {
     @apply flex justify-center text-2xl font-bold text-blue-950;
   }
+  
   .box-desc {
     @apply flex justify-center pt-5 font-medium text-sm font-bold text-zinc-800;
   }
+
   .box-link {
     @apply p-2 font-bold text-yellow-400 hover:text-yellow-500;
+  }
+
+  /* Timeline */
+  .dot-timeline {
+    @apply absolute w-4 h-4 rounded-full mt-1.5 border bg-yellow-400 border-yellow-400 -left-2;
+  }
+
+  .timeline-date {
+    @apply border-1 p-1 text-sm border-black bg-zinc-50 rounded-xl;
   }
 }
 
@@ -103,8 +114,13 @@
         @apply font-bold text-3xl pb-8;
         color: navy;
     }
+
     h2 {
-        @apply font-bold text-xl;
+        @apply font-bold text-xl pt-5 pb-3;
         color: black;
+    }
+
+    p {
+      @apply text-zinc-700;
     }
 }
