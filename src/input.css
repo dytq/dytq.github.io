@@ -47,6 +47,36 @@
   .card-desc {
     @apply flex justify-center pt-5 font-medium text-sm font-bold text-zinc-800;
   }
+
+  .card-img {
+    @apply relative rounded-xl border-2 border-blue-950;
+  }
+
+  .card-img-title {
+    @apply text-2xl font-bold text-yellow-400;
+  }
+
+  .card-img-desc {
+    @apply text-sm text-white;
+  }
+
+  .card-img-overlay {
+      @apply absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/70 backdrop-brightness-75;
+  }
+
+  .box {
+    @apply flex flex-col p-6 bg-zinc-50 border-blue-950 border-2 rounded-xl font-bold shadow-2xl hover:border-blue-600 transition delay-200;
+  }
+
+  .box-title {
+    @apply flex justify-center text-2xl font-bold text-blue-950;
+  }
+  .box-desc {
+    @apply flex justify-center pt-5 font-medium text-sm font-bold text-zinc-800;
+  }
+  .box-link {
+    @apply p-2 font-bold text-yellow-400 hover:text-yellow-500;
+  }
 }
 
 @layer base {
