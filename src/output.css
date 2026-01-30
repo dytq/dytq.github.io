@@ -240,6 +240,9 @@
   .grid {
     display: grid;
   }
+  .table {
+    display: table;
+  }
   .h-full {
     height: 100%;
   }
@@ -252,8 +255,17 @@
   .max-w-3xl {
     max-width: var(--container-3xl);
   }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
   .flex-shrink-0 {
     flex-shrink: 0;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
   }
   .snap-x {
     scroll-snap-type: x var(--tw-scroll-snap-strictness);
@@ -291,6 +303,10 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -304,6 +320,9 @@
   }
   .border-zinc-700 {
     border-color: var(--color-zinc-700);
+  }
+  .bg-yellow-400 {
+    background-color: var(--color-yellow-400);
   }
   .bg-\[url\(\'assets\/images\/wireshark\.jpg\'\)\] {
     background-image: url('assets/images/wireshark.jpg');
@@ -340,11 +359,28 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .text-black {
+    color: var(--color-black);
+  }
   .text-white {
     color: var(--color-white);
   }
   .text-yellow-400 {
     color: var(--color-yellow-400);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .filter {
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .backdrop-filter {
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
   .transition-transform {
     transition-property: transform, translate, scale, rotate;
@@ -650,6 +686,100 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -734,59 +864,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-blur {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-brightness {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-contrast {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-grayscale {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-hue-rotate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-invert {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-opacity {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-saturate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-sepia {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@property --tw-drop-shadow-size {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-gradient-position {
   syntax: "*";
   inherits: false;
@@ -829,42 +906,6 @@
   inherits: false;
   initial-value: 100%;
 }
-@property --tw-backdrop-blur {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-brightness {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-contrast {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-grayscale {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-hue-rotate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-invert {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-opacity {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-saturate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-backdrop-sepia {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-space-x-reverse {
   syntax: "*";
   inherits: false;
@@ -876,6 +917,29 @@
       --tw-scroll-snap-strictness: proximity;
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
       --tw-duration: initial;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
@@ -894,19 +958,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-blur: initial;
-      --tw-brightness: initial;
-      --tw-contrast: initial;
-      --tw-grayscale: initial;
-      --tw-hue-rotate: initial;
-      --tw-invert: initial;
-      --tw-opacity: initial;
-      --tw-saturate: initial;
-      --tw-sepia: initial;
-      --tw-drop-shadow: initial;
-      --tw-drop-shadow-color: initial;
-      --tw-drop-shadow-alpha: 100%;
-      --tw-drop-shadow-size: initial;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
       --tw-gradient-via: #0000;
@@ -916,15 +967,6 @@
       --tw-gradient-from-position: 0%;
       --tw-gradient-via-position: 50%;
       --tw-gradient-to-position: 100%;
-      --tw-backdrop-blur: initial;
-      --tw-backdrop-brightness: initial;
-      --tw-backdrop-contrast: initial;
-      --tw-backdrop-grayscale: initial;
-      --tw-backdrop-hue-rotate: initial;
-      --tw-backdrop-invert: initial;
-      --tw-backdrop-opacity: initial;
-      --tw-backdrop-saturate: initial;
-      --tw-backdrop-sepia: initial;
       --tw-space-x-reverse: 0;
     }
   }
