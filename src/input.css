@@ -49,11 +49,11 @@
   }
 
   .card-img {
-    @apply relative rounded-xl border-2 border-blue-950;
+    @apply relative rounded-xl aspect-[2/3];
   }
 
   .card-img-title {
-    @apply text-2xl font-bold text-yellow-400;
+    @apply text-3xl font-bold text-yellow-400;
   }
 
   .card-img-desc {
@@ -82,11 +82,15 @@
   }
 
   .timeline-date {
-    @apply border-1 p-1 text-sm border-black bg-zinc-50 rounded-lg;
+    @apply p-2 text-sm border-black bg-zinc-50 rounded-lg;
   }
 
+  /* Tag */
+  .tag-box {
+    @apply pt-5 flex space-x-3;
+  }
   .tag-txt {
-    @apply rounded-xl border-zinc-700 pr-2 pl-2 pt-1 pb-1 text-zinc-600 font-bold bg-zinc-100;
+    @apply pt-0.5 pb-0.5 pl-2 pr-2 text-sm border-black bg-zinc-100 rounded-lg;
   }
 }
 
@@ -103,7 +107,7 @@
     }
 
     main {
-      @apply min-h-screen max-w-5xl mx-auto px-6 md:px-2;
+      @apply min-h-screen max-w-7xl mx-auto px-6 md:px-2;
     }
 
     section {
