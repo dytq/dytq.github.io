@@ -71,13 +71,9 @@
   .box-title {
     @apply flex justify-center text-2xl font-bold text-blue-950;
   }
-  
+
   .box-desc {
     @apply flex justify-center pt-5 font-medium text-sm font-bold text-zinc-800;
-  }
-
-  .box-link {
-    @apply p-2 font-bold text-yellow-400 hover:text-yellow-500;
   }
 
   /* Timeline */
@@ -86,7 +82,11 @@
   }
 
   .timeline-date {
-    @apply border-1 p-1 text-sm border-black bg-zinc-50 rounded-xl;
+    @apply border-1 p-1 text-sm border-black bg-zinc-50 rounded-lg;
+  }
+
+  .tag-txt {
+    @apply rounded-xl border-zinc-700 pr-2 pl-2 pt-1 pb-1 text-zinc-600 font-bold bg-zinc-100;
   }
 }
 
@@ -122,5 +122,9 @@
 
     p {
       @apply text-zinc-700;
+    }
+
+    a {
+      @apply p-2 font-bold text-yellow-400 hover:text-yellow-500;
     }
 }
