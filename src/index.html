@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
-        <title>Taariq Dedarally - Portofolio</title>
+        <title data-i18n="page-title">Taariq Dedarally - Portfolio</title>
 	    <link href="./output.css" rel="stylesheet">
     </head>
     <body>
@@ -9,14 +9,18 @@
             <nav class="navbar">
                 <ul class="navbar-list">
                     <a class="navbar-brand">📓 Taariq Dedarally</a>
-                    <a href="#about" class="navbar-link">À propos</a>
-                    <a href="#skills" class="navbar-link">Mes Services</a>
-                    <a href="#experiences" class="navbar-link">Réalisations Professionnelles</a>
-                    <a href="#projects" class="navbar-link">Projets Réalisés</a>
-                    <a href="#certif" class="navbar-link">Diplômes et Certifications</a>
-                    <a href="#contact" class="navbar-link">Me contacter</a>
+                    <a href="#about" class="navbar-link" data-i18n="nav-about">À propos</a>
+                    <a href="#skills" class="navbar-link" data-i18n="nav-skills">Mes Services</a>
+                    <a href="#experiences" class="navbar-link" data-i18n="nav-experiences">Réalisations Professionnelles</a>
+                    <a href="#projects" class="navbar-link" data-i18n="nav-projects">Projets Réalisés</a>
+                    <a href="#certif" class="navbar-link" data-i18n="nav-certif">Diplômes et Certifications</a>
+                    <a href="#contact" class="navbar-link" data-i18n="nav-contact">Me contacter</a>
                 </ul>
             </nav>
+            <select class="absolute top-0 right-0 m-5">
+                <option id="fr">FR</option>
+                <option id="en">EN</option>
+            </select>
         </header>
         <main>
             <section id="about">
@@ -25,53 +29,53 @@
                     <div class="relative text-white px-8 py-12 max-w-3xl">
                         <div class="grid grid-cols-1 p-6 mt-20">
                             <div class="grid grid-cols-1 text-7xl font-bold">
-                                <span>Ingénieur en </span>
-                                <span>Réseau et </span>
-                                <span class="text-yellow-400"> Système</span>
+                                <span data-i18n="hero-title-1">Ingénieur en </span>
+                                <span data-i18n="hero-title-2">Réseau et </span>
+                                <span class="text-yellow-400" data-i18n="hero-title-3">Système</span>
                             </div>
-                            <p class="pt-16 text-white"> Spécialisé dans le service informatique, je développe des systèmes informatique innovantes, robustes et sécurisées. Ma spécialisation couvre le développement informatique, l'installation et la gestion informatique et la sécurité informatique avec une expertise certifiée.</p>
+                            <p class="pt-16 text-white" data-i18n="hero-desc">Spécialisé dans le service informatique, je développe des systèmes informatique innovantes, robustes et sécurisées. Ma spécialisation couvre le développement informatique, l'installation et la gestion informatique et la sécurité informatique avec une expertise certifiée.</p>
                         </div>
                     </div>
                 </div>
                 <div class="grid grid-cols-4 gap-10 pt-16">
                     <p class="card">
                         <span class="card-title">10+</span>
-                        <span class="card-desc">Projets Réalisés</span>
+                        <span class="card-desc" data-i18n="stat-projects">Projets Réalisés</span>
                     </p>
                     <p class="card">
                         <span class="card-title">Bac +5</span>
-                        <span class="card-desc">Années d'étude et Titre RNCP Certifié</span>
+                        <span class="card-desc" data-i18n="stat-education">Années d'étude et Titre RNCP Certifié</span>
                     </p>
                     <p class="card">
                         <span class="card-title">15+</span>
-                        <span class="card-desc">Langage de Programmation & Technologies</span>
+                        <span class="card-desc" data-i18n="stat-languages">Langage de Programmation & Technologies</span>
                     </p>
                     <p class="card">
                         <span class="card-title">5+</span>
-                        <span class="card-desc">Hackathons & Certifications</span>
+                        <span class="card-desc" data-i18n="stat-hackathons">Hackathons & Certifications</span>
                     </p>
                 </div>
             </section>
             <section id="skills">
-                <h1>Mes Services</h1>
-                <p>De la simple installation de réseaux informatiques à la conception de réseaux virtuels complexes, je couvre un large panel de services informatiques.</p>
+                <h1 data-i18n="skills-title">Mes Services</h1>
+                <p data-i18n="skills-desc">De la simple installation de réseaux informatiques à la conception de réseaux virtuels complexes, je couvre un large panel de services informatiques.</p>
                 <div class="grid grid-cols-3 gap-10 pt-16">
                     <div class="card-img group overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/images/dev_soft.png" alt="img dev-soft"">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/images/dev_soft.png" alt="img dev-soft">
                           <div class="card-img-overlay"></div>
                         <div class="absolute bottom-10 left-5">
-                            <span class="card-img-title">Langage de programmations </span>
-                            <p class="card-img-desc text-white mt-3">
+                            <span class="card-img-title" data-i18n="skill1-title">Langage de programmations</span>
+                            <p class="card-img-desc text-white mt-3" data-i18n="skill1-desc">
                                 Expérience professionnel dans la conception et ingénierie de logiciels dans différents langage de programmation comme C/C++, Python, Java
                             </p>
                         </div>
                     </div>
                     <div class="card-img group overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/images/network.jpg" alt="img dev-soft"">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/images/network.jpg" alt="img dev-soft">
                         <div class="card-img-overlay"></div>
                         <div class="absolute bottom-10 left-5">
-                            <span class="card-img-title">Réseaux et Systèmes</span>
-                            <p class="card-img-desc text-white mt-3">
+                            <span class="card-img-title" data-i18n="skill2-title">Réseaux et Systèmes</span>
+                            <p class="card-img-desc text-white mt-3" data-i18n="skill2-desc">
                                 Formation solide en dépoiement, installation et documentation de réseaux informatiques, sur des technologies comme Cisco, Promox, GNS3, Linux, Windows Server.
                             </p>
                         </div>
@@ -80,8 +84,8 @@
                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/images/proxmox.png" alt="img dev-soft">
                         <div class="card-img-overlay"></div>
                         <div class="absolute bottom-10 left-5">
-                            <span class="card-img-title">Sécurité Informatique</span>
-                            <p class="card-img-desc text-white mt-3">
+                            <span class="card-img-title" data-i18n="skill3-title">Sécurité Informatique</span>
+                            <p class="card-img-desc text-white mt-3" data-i18n="skill3-desc">
                                 Déploiement de VLAN - Active Directory - GPO, mise en place de Firewall avec PFSENSE et analyse de paquet avec Wireshark.
                             </p>
                         </div>
@@ -89,37 +93,37 @@
                 </div>
             </section>
             <section id="experiences">
-                <h1>Mes Réalisations Professionnelles</h1>
-                <p>Projets techniques réalisés dans un cadre professionnel et compétitif, couvrant l’analyse des besoins, la conception, la mise en œuvre et la maintenance de solutions informatiques adaptées aux contraintes techniques et opérationnelles.</p>
+                <h1 data-i18n="exp-title">Mes Réalisations Professionnelles</h1>
+                <p data-i18n="exp-desc">Projets techniques réalisés dans un cadre professionnel et compétitif, couvrant l'analyse des besoins, la conception, la mise en œuvre et la maintenance de solutions informatiques adaptées aux contraintes techniques et opérationnelles.</p>
                 <div class="grid grid-cols-3 gap-10 pt-16">
                     <p class="box">
-                        <span class="box-title">Naval Group - Ingénieur Concepteur Développeur Logiciel - Stage</span>
+                        <span class="box-title" data-i18n="exp1-title">Naval Group - Ingénieur Concepteur Développeur Logiciel - Stage</span>
                         <time datetime="2024">2024</time>
-                        <span class="box-desc">Stage de 6 mois dans l'industrie Maritime et la Défense sur lequel j'ai développé un générateur de plugins pour le logiciel Wireshark en Python et Lua, afin d’analyser le réseau informatique d’un navire de défense.</span>
+                        <span class="box-desc" data-i18n="exp1-desc">Stage de 6 mois dans l'industrie Maritime et la Défense sur lequel j'ai développé un générateur de plugins pour le logiciel Wireshark en Python et Lua, afin d'analyser le réseau informatique d'un navire de défense.</span>
                     </p>
                     <p class="box">
-                        <span class="box-title">Hackathon International organisé par Huawei à Nuremberg</span>
+                        <span class="box-title" data-i18n="exp2-title">Hackathon International organisé par Huawei à Nuremberg</span>
                         <time datetime="2025">2025</time>
-                        <span class="box-desc">Projet en équipe de 3 personnes, qui consiste à optimiser le coût financier d’une batterie BESS en Python - simulation de charge/décharge et évaluation ROI par pays.</span>
-                        <a class="box-link" href="https://github.com/dytq/Projet_Nuremberg_Huawei_TechArena_2025"> ➜ Lien du projet</a>
+                        <span class="box-desc" data-i18n="exp2-desc">Projet en équipe de 3 personnes, qui consiste à optimiser le coût financier d'une batterie BESS en Python - simulation de charge/décharge et évaluation ROI par pays.</span>
+                        <a class="box-link" href="https://github.com/dytq/Projet_Nuremberg_Huawei_TechArena_2025" data-i18n="exp-link">➜ Lien du projet</a>
                     </p>
                     <p class="box">
-                        <span class="box-title">Hackathon organisé par XPR Ledger à Paris</span>
+                        <span class="box-title" data-i18n="exp3-title">Hackathon organisé par XPR Ledger à Paris</span>
                         <time datetime="2025">2025</time>
-                        <span class="box-desc">Participation au Hackathon XPR Ledger à Paris autour de la blockchain et du smart contract. L'objectif du projet était de vérifier la véracité kilométrique d'une véhicule avec une application web</span>
-                        <a class="box-link" href="https://github.com/dytq/Hackathon-XPRL---True-Miles"> ➜ Lien du projet</a>
+                        <span class="box-desc" data-i18n="exp3-desc">Participation au Hackathon XPR Ledger à Paris autour de la blockchain et du smart contract. L'objectif du projet était de vérifier la véracité kilométrique d'une véhicule avec une application web</span>
+                        <a class="box-link" href="https://github.com/dytq/Hackathon-XPRL---True-Miles" data-i18n="exp-link">➜ Lien du projet</a>
                     </p>
                 </div>
             </section>
             <section id="projects">
-                <h1>Projets Réalisés</h1>
-                <p>Sélection de projets mettant en œuvre des compétences avancées en réseaux, systèmes et développement.</p>
+                <h1 data-i18n="projects-title">Projets Réalisés</h1>
+                <p data-i18n="projects-desc">Sélection de projets mettant en œuvre des compétences avancées en réseaux, systèmes et développement.</p>
                 <ol class="relative border-s border-default mt-10">
                     <li class="mb-10 ms-6">
                         <div class="dot-timeline"></div>
-                        <time class="timeline-date" datetime="2026">Décembre, 2026</time>
-                        <h2>Projet DuckStore - HomeLab (Projet en continue)</h2>
-                        <p class="timeline-text">Je possède une maquette où j’implémente des outils professionnels en système et réseau.</p>
+                        <time class="timeline-date" datetime="2026" data-i18n="proj1-date">Décembre, 2026</time>
+                        <h2 data-i18n="proj1-title">Projet DuckStore - HomeLab (Projet en continue)</h2>
+                        <p class="timeline-text" data-i18n="proj1-desc">Je possède une maquette où j'implémente des outils professionnels en système et réseau.</p>
                         <div class="tag-box">
                             <span class="tag-txt">Proxmox</span>
                             <span class="tag-txt">Windows Server</span>
@@ -129,9 +133,9 @@
                     </li>
                     <li class="mb-10 ms-6">
                         <div class="dot-timeline"></div>
-                        <time class="timeline-date" datetime="2025">Novembre, 2025</time>
-                        <h2>Hackathon Root-Me</h2>
-                        <p>Hackathon sur les outils de sécurités sur la plateforme Root-Me.</p>
+                        <time class="timeline-date" datetime="2025" data-i18n="proj2-date">Novembre, 2025</time>
+                        <h2 data-i18n="proj2-title">Hackathon Root-Me</h2>
+                        <p data-i18n="proj2-desc">Hackathon sur les outils de sécurités sur la plateforme Root-Me.</p>
                         <div class="tag-box">
                             <span class="tag-txt">Forensic</span>
                             <span class="tag-txt">Challenge</span>
@@ -141,12 +145,12 @@
                     </li>
                     <li class="mb-10 ms-6">
                         <div class="dot-timeline"></div>
-                        <time class="timeline-date" datetime="2022">Janvier, 2022</time>
-                        <h2>Projet de Travail d’Étude et de Recherche (TER) IA</h2>
-                        <p>Implémentation d’un jeu de société en C++ pour développer une IA et y faire une analyse d’optimisation et de graphe. Démo jouable en ligne :
+                        <time class="timeline-date" datetime="2022" data-i18n="proj3-date">Janvier, 2022</time>
+                        <h2 data-i18n="proj3-title">Projet de Travail d'Étude et de Recherche (TER) IA</h2>
+                        <p data-i18n="proj3-desc">Implémentation d'un jeu de société en C++ pour développer une IA et y faire une analyse d'optimisation et de graphe. Démo jouable en ligne :
                             <a href="https://dytq.itch.io/web-carcassonne">Lien Web Carcassonne</a>
                         </p>
-                        <h2>Capture d'écran</h2>
+                        <h2 data-i18n="screenshot">Capture d'écran</h2>
                         <div class="border-2 border-zinc-700 rounded-lg mb-5">
                             <div dir="ltr" class="-mb-4 p-5">
                                 <div class="flex overflow-x-auto snap-x gap-4 mb-4">
@@ -169,12 +173,12 @@
                     </li>
                     <li class="mb-10 ms-6">
                         <div class="dot-timeline"></div>
-                        <time class="timeline-date" datetime="2019">Janvier, 2019</time>
-                        <h2>Implémentation de l'algorithme RSA</h2>
-                        <p>Développement de l'algorithme RSA en langage C en équipe de 8 personnes.
+                        <time class="timeline-date" datetime="2019" data-i18n="proj4-date">Janvier, 2019</time>
+                        <h2 data-i18n="proj4-title">Implémentation de l'algorithme RSA</h2>
+                        <p data-i18n="proj4-desc">Développement de l'algorithme RSA en langage C en équipe de 8 personnes.
                             <a href="https://github.com/RSA-DataSafe/RSA-DataSafe">Lien du projet</a>
                         </p>
-                        <h2>Capture d'écran</h2>
+                        <h2 data-i18n="screenshot">Capture d'écran</h2>
                         <div class="border-2 border-zinc-700 rounded-lg mb-5">
                             <div dir="ltr" class="-mb-4 p-5">
                                 <div class="flex overflow-x-auto snap-x gap-4 mb-4">
@@ -191,12 +195,12 @@
                     </li>
                     <li class="mb-10 ms-6">
                         <div class="dot-timeline"></div>
-                        <time class="timeline-date" datetime="2017">Janvier, 2017</time>
-                        <h2>Projet Space Adventure</h2>
-                        <p>Premier projet en groupe codé en Python et Tkinter d'un jeu consistant à éviter des obstacle à bord d'un vaisseau spatiale.
+                        <time class="timeline-date" datetime="2017" data-i18n="proj5-date">Janvier, 2017</time>
+                        <h2 data-i18n="proj5-title">Projet Space Adventure</h2>
+                        <p data-i18n="proj5-desc">Premier projet en groupe codé en Python et Tkinter d'un jeu consistant à éviter des obstacle à bord d'un vaisseau spatiale.
                             <a href="https://github.com/dytq/Projet-Space-Adventure">Lien du projet</a>
                         </p>
-                        <h2>Capture d'écran</h2>
+                        <h2 data-i18n="screenshot">Capture d'écran</h2>
                         <div class="border-2 border-zinc-700 rounded-lg mb-5">
                             <div dir="ltr" class="-mb-4 p-5">
                                 <div class="flex overflow-x-auto snap-x gap-4 mb-4">
@@ -214,29 +218,29 @@
                 </ol>
             </section>
             <section id="certif">
-                <h1>Diplômes et Certifications</h1>
-                <p>Certifications professionnelles validant mes compétences en réseau, systèmes et cloud.</p>                         
+                <h1 data-i18n="certif-title">Diplômes et Certifications</h1>
+                <p data-i18n="certif-desc">Certifications professionnelles validant mes compétences en réseau, systèmes et cloud.</p>                         
                 <div class="grid grid-cols-3 gap-10 pt-16">
                     <p class="box">
-                        <span class="box-title">RNCP Administrateur Systèmes Réseaux Cloud - IPI</span>
+                        <span class="box-title" data-i18n="certif1-title">RNCP Administrateur Systèmes Réseaux Cloud - IPI</span>
                         <time datetime="2024">2025</time>
-                        <span class="box-desc">Formation sur la mise en place d'outils professionnels pour l'installation, le déploiement, virtualisation et la maintenance de structures réseaux infomatique.</span>
+                        <span class="box-desc" data-i18n="certif1-desc">Formation sur la mise en place d'outils professionnels pour l'installation, le déploiement, virtualisation et la maintenance de structures réseaux infomatique.</span>
                     </p>
                     <p class="box">
-                        <span class="box-title">Master en Ingénierie des Réseaux et des Systèmes - Paris Saclay</span>
+                        <span class="box-title" data-i18n="certif2-title">Master en Ingénierie des Réseaux et des Systèmes - Paris Saclay</span>
                         <time datetime="2024">2024</time>
-                        <span class="box-desc">Formé au sein d'un grand pôle scientifique français, j'ai acquis des compétances solides en Réseaux et Systèmes Informatique. Que ce soit de la mise en place d'architecture, d'optimisation et de conceptions théorique, j'ai acquis une grande rigueur scientifique et critique.</span>
+                        <span class="box-desc" data-i18n="certif2-desc">Formé au sein d'un grand pôle scientifique français, j'ai acquis des compétances solides en Réseaux et Systèmes Informatique. Que ce soit de la mise en place d'architecture, d'optimisation et de conceptions théorique, j'ai acquis une grande rigueur scientifique et critique.</span>
                     </p>
                     <p class="box">
-                        <span class="box-title">Licence Informatique Fondamentale</span>
+                        <span class="box-title" data-i18n="certif3-title">Licence Informatique Fondamentale</span>
                         <time datetime="2021">2021</time>
-                        <span class="box-desc">Licence sur les fondamentaux scientifique informatique</span>
+                        <span class="box-desc" data-i18n="certif3-desc">Licence sur les fondamentaux scientifique informatique</span>
                     </p>
                 </div>
             </section>
             <section id="contact">
-                <h1>Me contacter</h1>
-                <p>Une question, un projet ou une opportunité ? N’hésitez pas à me contacter.</p>
+                <h1 data-i18n="contact-title">Me contacter</h1>
+                <p data-i18n="contact-desc">Une question, un projet ou une opportunité ? N'hésitez pas à me contacter.</p>
                 <ul class="border-2 rounded-xl p-5 mb-10 border-blue-900 mt-10">
                     <li> Email  <a href="mailto:taariq.deda@gmail.com">taariq.deda@gmail.com</a></li>
                     <li> Github <a href="https://github.com/dytq">https://github.com/dytq</a></li>
@@ -244,8 +248,113 @@
                 </ul>
             </section>
         </main>
-        <footer class="site-footer">
+        <footer class="site-footer" data-i18n="footer">
             © 2026 - Taariq Dedarally - Ingénieur en Réseau et Système / Développeur 
         </footer>
+        
+        <script>
+            const translations = {
+                en: {
+                    "page-title": "Taariq Dedarally - Portfolio",
+                    "nav-about": "About",
+                    "nav-skills": "My Services",
+                    "nav-experiences": "Professional Achievements",
+                    "nav-projects": "Completed Projects",
+                    "nav-certif": "Degrees and Certifications",
+                    "nav-contact": "Contact me",
+                    
+                    "hero-title-1": "Network and ",
+                    "hero-title-2": "System ",
+                    "hero-title-3": "Engineer",
+                    "hero-desc": "Specialized in IT services, I develop innovative, robust and secure computer systems. My expertise covers software development, IT installation and management, and IT security with certified expertise.",
+                    
+                    "stat-projects": "Completed Projects",
+                    "stat-education": "Years of study and RNCP Certified Title",
+                    "stat-languages": "Programming Languages & Technologies",
+                    "stat-hackathons": "Hackathons & Certifications",
+                    
+                    "skills-title": "My Services",
+                    "skills-desc": "From simple network installation to complex virtual network design, I cover a wide range of IT services.",
+                    "skill1-title": "Programming Languages",
+                    "skill1-desc": "Professional experience in software design and engineering in various programming languages such as C/C++, Python, Java",
+                    "skill2-title": "Networks and Systems",
+                    "skill2-desc": "Strong background in deployment, installation and documentation of computer networks, on technologies such as Cisco, Proxmox, GNS3, Linux, Windows Server.",
+                    "skill3-title": "IT Security",
+                    "skill3-desc": "Deployment of VLAN - Active Directory - GPO, implementation of Firewall with PFSENSE and packet analysis with Wireshark.",
+                    
+                    "exp-title": "My Professional Achievements",
+                    "exp-desc": "Technical projects carried out in a professional and competitive environment, covering needs analysis, design, implementation and maintenance of IT solutions adapted to technical and operational constraints.",
+                    "exp1-title": "Naval Group - Software Developer Engineer - Internship",
+                    "exp1-desc": "6-month internship in the Maritime and Defense industry where I developed a plugin generator for Wireshark software in Python and Lua, to analyze the computer network of a defense vessel.",
+                    "exp2-title": "International Hackathon organized by Huawei in Nuremberg",
+                    "exp2-desc": "Team project of 3 people, consisting of optimizing the financial cost of a BESS battery in Python - charge/discharge simulation and ROI evaluation by country.",
+                    "exp3-title": "Hackathon organized by XPR Ledger in Paris",
+                    "exp3-desc": "Participation in the XPR Ledger Hackathon in Paris around blockchain and smart contracts. The project objective was to verify the mileage veracity of a vehicle with a web application",
+                    "exp-link": "➜ Project link",
+                    
+                    "projects-title": "Completed Projects",
+                    "projects-desc": "Selection of projects implementing advanced skills in networks, systems and development.",
+                    "proj1-date": "December, 2026",
+                    "proj1-title": "DuckStore Project - HomeLab (Ongoing project)",
+                    "proj1-desc": "I own a mockup where I implement professional system and network tools.",
+                    "proj2-date": "November, 2025",
+                    "proj2-title": "Root-Me Hackathon",
+                    "proj2-desc": "Hackathon on security tools on the Root-Me platform.",
+                    "proj3-date": "January, 2022",
+                    "proj3-title": "AI Research and Study Work Project (TER)",
+                    "proj3-desc": "Implementation of a board game in C++ to develop an AI and perform optimization and graph analysis. Playable demo online: ",
+                    "proj4-date": "January, 2019",
+                    "proj4-title": "RSA Algorithm Implementation",
+                    "proj4-desc": "Development of the RSA algorithm in C language in a team of 8 people. ",
+                    "proj5-date": "January, 2017",
+                    "proj5-title": "Space Adventure Project",
+                    "proj5-desc": "First group project coded in Python and Tkinter of a game consisting of avoiding obstacles aboard a spacecraft. ",
+                    "screenshot": "Screenshot",
+                    
+                    "certif-title": "Degrees and Certifications",
+                    "certif-desc": "Professional certifications validating my skills in networking, systems and cloud.",
+                    "certif1-title": "RNCP Cloud Network Systems Administrator - IPI",
+                    "certif1-desc": "Training on the implementation of professional tools for the installation, deployment, virtualization and maintenance of computer network structures.",
+                    "certif2-title": "Master in Network and Systems Engineering - Paris Saclay",
+                    "certif2-desc": "Trained within a major French scientific hub, I acquired solid skills in Networks and Computer Systems. Whether it's setting up architecture, optimization and theoretical design, I acquired great scientific and critical rigor.",
+                    "certif3-title": "Bachelor's Degree in Fundamental Computer Science",
+                    "certif3-desc": "Bachelor's degree on the scientific fundamentals of computer science",
+                    
+                    "contact-title": "Contact me",
+                    "contact-desc": "A question, a project or an opportunity? Feel free to contact me.",
+                    
+                    "footer": "© 2026 - Taariq Dedarally - Network and System Engineer / Developer"
+                }
+            };
+
+            function setLanguage(lang) {
+                document.documentElement.lang = lang;
+
+                // Si on passe en anglais, on applique les traductions
+                if (lang === 'en') {
+                    document.querySelectorAll("[data-i18n]").forEach(el => {
+                        const key = el.dataset.i18n;
+                        if (translations.en[key]) {
+                            el.textContent = translations.en[key];
+                        }
+                    });
+                } else {
+                    // Si on revient en français, on recharge la page pour retrouver le contenu original
+                    location.reload();
+                }
+
+                localStorage.setItem("lang", lang);
+            }
+
+            // Boutons
+            document.getElementById("fr").onclick = () => setLanguage("fr");
+            document.getElementById("en").onclick = () => setLanguage("en");
+
+            // Langue au chargement
+            const savedLang = localStorage.getItem("lang");
+            if (savedLang === 'en') {
+                setLanguage('en');
+            }
+        </script>
     </body>
 </html>
