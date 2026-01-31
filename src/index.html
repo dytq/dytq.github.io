@@ -329,7 +329,6 @@
             function setLanguage(lang) {
                 document.documentElement.lang = lang;
 
-                // Si on passe en anglais, on applique les traductions
                 if (lang === 'en') {
                     document.querySelectorAll("[data-i18n]").forEach(el => {
                         const key = el.dataset.i18n;
@@ -338,18 +337,15 @@
                         }
                     });
                 } else {
-                    // Si on revient en français, on recharge la page pour retrouver le contenu original
                     location.reload();
                 }
 
                 localStorage.setItem("lang", lang);
             }
 
-            // Boutons
             document.getElementById("fr").onclick = () => setLanguage("fr");
             document.getElementById("en").onclick = () => setLanguage("en");
 
-            // Langue au chargement
             const savedLang = localStorage.getItem("lang");
             if (savedLang === 'en') {
                 setLanguage('en');
