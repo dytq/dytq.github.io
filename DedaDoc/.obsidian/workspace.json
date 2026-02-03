@@ -200,10 +200,27 @@
       "webpage-html-export:Export as HTML": false
     }
   },
-  "active": "97bb87ec06aa38e2",
+  "active": "dcc2b50992bafd65",
   "lastOpenFiles": [
-    "HomeLab",
+    "HomeLab/Résumé.md",
     "DedaDoc.md",
+    "HomeLab/Projet DuckStore.md",
+    "Assets/Images/LAN_PFSENSE.png",
+    "[DuckStore.md",
+    "Assets/Images/config_pfsense.png",
+    "Assets/Images/DHCP_WINDOWS_SRV.png",
+    "Assets/Images/Kernel_Panic.png",
+    "Assets/Images/gpo_ecran.png",
+    "Assets/Images/suricata.png",
+    "Assets/Images/firewall_exemple.png",
+    "Assets/Images/pfsense.png",
+    "Assets/Images/tableau_dhcp.png",
+    "Assets/Images/serveur_dns.png",
+    "Assets/Untitled.md",
+    "Untitled.md",
+    "Assets/Images",
+    "Assets",
+    "HomeLab",
     "create a link.md"
   ]
 }
