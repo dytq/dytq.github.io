@@ -22,22 +22,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "ce0536e1de0f0641",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "29fa35234a128380",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -202,25 +186,38 @@
   },
   "active": "dcc2b50992bafd65",
   "lastOpenFiles": [
-    "HomeLab/Résumé.md",
-    "DedaDoc.md",
+    "Carcassonne/Résumé.md",
     "HomeLab/Projet DuckStore.md",
-    "Assets/Images/LAN_PFSENSE.png",
+    "Carcassonne/Projet_Carcassonne.md",
+    "DedaDoc.md",
+    "HomeLab/Résumé.md",
+    "Assets/Images/HomeLab_img/maquette_cisco.png",
+    "Projet.md",
+    "Assets/Images/Carcasonne_img/aleatvsaleat.png",
+    "Assets/Images/Carcasonne_img/Algo_MonteCarlo.png",
+    "2026-02-03.md",
+    "Untitled.base",
+    "Untitled.canvas",
+    "Assets/Images/Carcasonne_img/exemplepartie.png",
+    "Assets/Images/Carcasonne_img/bordurefils.png",
+    "Assets/Images/Carcasonne_img/ALEATvsALEAT.pdf",
+    "Assets/Images/Carcasonne_img/MINIMAXvsMINIMAX.pdf",
+    "Assets/Images/Carcasonne_img/MINIMAXvsALEAT.pdf",
+    "aleat.cpp",
+    "Assets/Images/Carcasonne_img/reseautuiles.png",
+    "Assets/Images/Carcasonne_img/tuilelink.png",
+    "Assets/Images/Carcasonne_img/tuileelement.png",
+    "Assets/Images/Carcasonne_img/tuilebordure.png",
+    "Assets/Images/Carcasonne_img/Algo_AlphaBeta.png",
+    "Assets/Images/Carcasonne_img",
+    "Assets/Images/HomeLab_img",
+    "Assets/Images/Untitled.md",
+    "Carcassonne",
     "[DuckStore.md",
-    "Assets/Images/config_pfsense.png",
-    "Assets/Images/DHCP_WINDOWS_SRV.png",
-    "Assets/Images/Kernel_Panic.png",
-    "Assets/Images/gpo_ecran.png",
-    "Assets/Images/suricata.png",
-    "Assets/Images/firewall_exemple.png",
-    "Assets/Images/pfsense.png",
-    "Assets/Images/tableau_dhcp.png",
-    "Assets/Images/serveur_dns.png",
     "Assets/Untitled.md",
     "Untitled.md",
     "Assets/Images",
     "Assets",
-    "HomeLab",
     "create a link.md"
   ]
 }
