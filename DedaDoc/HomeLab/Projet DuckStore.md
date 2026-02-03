@@ -1,24 +1,18 @@
 ---
-
-title: Projet DuckStore 
-author: Taariq Dedarally 
-date: December 2025 
-
+title: Projet DuckStore - Réseau Virtuelle Proxmox
+author: Taariq Dedarally
+date: December 2025
 tags:
-- réseau
-- infrastructure
-- virtualisation
-- Active Directory
-- PfSense
-- Proxmox
-- VLAN
-- sécurité
-- DMZ
-- documentation type: projet statut: fonctionnel
-
+  - réseau
+  - infrastructure
+  - virtualisation
+  - ActiveDirectory
+  - PfSense
+  - Proxmox
+  - VLAN
+  - sécurité
+  - DMZ
 ---
----
-
 > ⚠️ **AVERTISSEMENT — UTILISATION RESTREINTE**
 > 
 > Ce document est la propriété de **Taariq Dedarally**. Tout usage, reproduction, distribution, modification ou diffusion de ce document, même partielle, est strictement interdit sans autorisation préalable écrite de son auteur. 
@@ -35,9 +29,6 @@ Je tiens à remercier toutes les personnes qui ont contribué de près ou de loi
 J'adresse mes sincères remerciements à tous les formateurs et toutes les personnes qui, par leurs paroles, leurs écrits, leurs conseils et leurs critiques, ont guidé mon apprentissage et ont accepté de me rencontrer et de répondre à mes questions durant la formation.
 
 Je tiens aussi à souligner l'accueil chaleureux de l'école et de notre groupe d'élèves, qui ont pu témoigner d'une grande solidarité et d'un esprit d'équipe indéniable.
-
----
-
 # 1. Introduction
 
 ## 1.1 Présentation du candidat
@@ -102,9 +93,6 @@ Le plan d'action est le suivant :
 6. **Stockage partagé** — Isoler et permettre l'accès à un système de stockage partagé.
 
 > [!NOTE] L'ensemble du réseau doit permettre une facilité de déploiement et de maintenance. Il a donc été choisi de s'orienter vers des hyperviseurs de type 1.
-
----
-
 # 2. Développement Technique du Projet
 
 ## 2.1 Infrastructure et technologies utilisées
@@ -115,7 +103,7 @@ Le schéma directeur est concentré dans les locaux de DuckStore. Chaque employ�
 
 La maquette représentée ci-dessous est un exemple si l'on souhaite implémenter le réseau en physique avec les cinq départements.
 
-`maquette_cisco.png`
+![[maquette_cisco.png]]
 
 > Description Figure:_Maquette Cisco représentant le schéma physique du projet_
 
@@ -179,9 +167,6 @@ Pour une petite entreprise comme DuckStore, Proxmox est une solution adaptée se
 > Description Figure:_Déploiement des machines virtuelles dans Proxmox. Les machines sont éteintes sur cette capture._
 
 Chaque machine est référencée avec des **tags**, ce qui permet de filtrer et retrouver plus facilement une machine.
-
----
-
 ## 2.2 Mise en place de l'infrastructure
 
 ### 2.2.1 Virtualisation
@@ -224,9 +209,6 @@ Pour créer une machine, il faut tout d'abord importer l'ISO dans un espace déd
 Une machine **"template"** a été utilisée pour réaliser des **"link clone"**, permettant de déployer rapidement un nouveau poste client sans devoir réinstaller une machine complète.
 
 > [!NOTE] Une machine obsolète `RTRWin` a été créée comme essai pour faire du routage sous Windows via le rôle "Serveur dédié au routage" dans Windows Server 2019. Cette solution n'était pas efficiente et consommait trop de ressources.
-
----
-
 ### 2.2.2 Annuaire LDAP — Active Directory
 
 Pour l'annuaire LDAP, **Windows Server 2019** a été utilisé avec le rôle **AD DS**. Un petit script Python disponible ici: https://github.com/dytq/ou_adds_generator a été créé permettant de générer des scripts `.ps1` exécutables avec PowerShell. Cela permet d'éviter des erreurs, garantit davantage de sécurité (chaque utilisateur reçoit un mot de passe par défaut) et assure une meilleure traçabilité.
@@ -252,8 +234,6 @@ Pour l'annuaire LDAP, **Windows Server 2019** a été utilisé avec le rôle **A
 
 ![[OU.png]]
 > Description Figure:_Capture d'écran des unités d'organisation. Ici sont représentés les groupes pour les employés Opérations._
-
----
 
 ### 2.2.3 Stockage — Serveur de partage de fichiers
 
@@ -289,9 +269,6 @@ Le disque Z: a été partagé avec les permissions suivantes :
 > Description Figure:_Accès client au stockage partagé dans Z_
 
 > [!TIP] **Amélioration possible :** Pour faciliter l'accès au stockage, une icône pourrait être ajoutée sur le bureau via une GPO.
-
----
-
 ### 2.2.4 Services Réseaux
 
 #### Service DNS
@@ -323,9 +300,6 @@ Le serveur DHCP est installé sous forme de rôle dans Windows Server. Des éten
 Pour le site web, un conteneur **LXC Debian** a été créé dans Proxmox. Le conteneur a été téléchargé directement depuis l'interface de Proxmox. **Apache2** a été installé via `apt`.
 
 > [!NOTE] L'avantage du conteneur est sa faible consommation de ressources par rapport à une machine virtuelle classique car une partie du système est partagée.
-
----
-
 ### 2.2.5 Sécurité — PfSense
 
 Pour la partie sécurité, **PfSense** a été utilisé. PfSense permet de faire du routage et de la gestion de firewall.
@@ -379,9 +353,6 @@ Dans PfSense, le package **Suricata** peut être installé. Il sert à bloquer l
 ![[suricata.png]]
 
 > Description Figure:_Capture d'écran de l'interface Suricata intégrée dans PfSense_
-
----
-
 ### 2.2.6 Les GPO (Group Policy Objects)
 
 Une GPO a été mise en place pour le changement du fond d'écran afin de vérifier le bon fonctionnement.
@@ -391,9 +362,6 @@ Une GPO a été mise en place pour le changement du fond d'écran afin de vérif
 > Description Figure:_Un exemple de GPO appliquée à l'ensemble de la forêt qui change le fond d'écran_
 
 > [!TIP] **Pistes d'amélioration :** Les GPO constituent un projet à part entière. Il aurait fallu déterminer les objectifs de sécurité et établir une liste de politiques à appliquer, notamment pour restreindre l'accès à certaines ressources (terminal, etc.), faire des changements de mots de passe, ou ajouter une icône de stockage sur le bureau. Cela pourrait être agrégé dans un script Python générant des commandes PowerShell telles que `New-GPO`.
-
----
-
 ## 2.3 Les difficultés rencontrées
 
 - **Manque de ressources RAM** — frein majeur, provoquant régulièrement des **Kernel Panic**.
@@ -403,9 +371,6 @@ Une GPO a été mise en place pour le changement du fond d'écran afin de vérif
 ![[Kernel_Panic.png]]
 
 > Description Figure:_Kernel Panic signifiant un crash de la VM Proxmox_
-
----
-
 # 3. Conclusion
 
 Pour ce scénario, les connaissances fondamentales en réseaux, en sécurité et en gestion d'infrastructures ont été mobilisées. Grâce à la formation, il a été possible de mettre en place un Active Directory dans une situation concrète, des outils de virtualisation comme Proxmox et les best practices en termes de gestion et de sécurité.
@@ -417,9 +382,6 @@ Sur un projet à long terme, il est suggéré de creuser plus en profondeur, not
 - La partie **automatisation**
 - L'**inventaire**
 - Le **firewall** et la définition des **GPO** pour limiter les accès non autorisés par les employés
-
----
-
 # 4. Sources & Références
 
 |Ressource|URL|
