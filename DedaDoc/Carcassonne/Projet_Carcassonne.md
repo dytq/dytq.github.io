@@ -1,5 +1,6 @@
 ---
 title: Compte Rendu du Projet TER — IA Carcassonne
+link: https://github.com/Carcassonne-IA-Version-Deux-Joueurs
 tags:
   - IA
   - Carcassonne

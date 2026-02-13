@@ -14,11 +14,11 @@
   }
 
   .navbar-brand {
-    @apply font-bold text-gray-800;
+    @apply font-bold text-gray-800 mr-6;
   }
 
   .navbar-list {
-    @apply flex list-none gap-6 p-4;
+    @apply flex list-none gap-3 p-2 mt-2 mb-2;
   }
 
   .navbar-link {

@@ -8,20 +8,33 @@
         "type": "tabs",
         "children": [
           {
-            "id": "dcc2b50992bafd65",
+            "id": "f13a8f8c044b6ee6",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Assets/Images/HomeLab_img/proxmox.png"
+              },
+              "icon": "lucide-image",
+              "title": "proxmox"
+            }
+          },
+          {
+            "id": "085c50333d88e46f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DedaDoc.md",
+                "file": "SeaOfDevs/SeaofDevs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DedaDoc"
+              "title": "SeaofDevs"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -184,40 +197,50 @@
       "webpage-html-export:Export as HTML": false
     }
   },
-  "active": "dcc2b50992bafd65",
+  "active": "085c50333d88e46f",
   "lastOpenFiles": [
-    "Carcassonne/Résumé.md",
-    "HomeLab/Projet DuckStore.md",
-    "Carcassonne/Projet_Carcassonne.md",
+    "SeaOfDevs/Résumé.md",
     "DedaDoc.md",
+    "Carcassonne/Résumé.md",
+    "Cloud/SDN.md",
+    "FastMetro/Résumé.md",
+    "HomeLab/Projet DuckStore.md",
+    "SeaOfDevs/SeaofDevs.md",
+    "Carcassonne/Projet_Carcassonne.md",
+    "Cloud/Résumé.md",
     "HomeLab/Résumé.md",
+    "Assets/Images/HomeLab_img/proxmox.png",
+    "Assets/Images/HomeLab_img/pfsense.png",
+    "Assets/Images/HomeLab_img/Pasted image 20260203121759.png",
+    "Assets/Images/HomeLab_img/OU.png",
+    "Assets/Images/HomeLab_img/Organisation_Stockage.png",
     "Assets/Images/HomeLab_img/maquette_cisco.png",
+    "Assets/Images/HomeLab_img/LAN_PFSENSE.png",
+    "Assets/Images/HomeLab_img/kvm.png",
+    "Assets/Images/HomeLab_img/Kernel_Panic.png",
+    "Assets/Images/HomeLab_img/inventaire_des_machines.png",
+    "FastMetro/FastMetro.md",
+    "Assets/Images/SeaOfDevs_img",
+    "SeaOfDevs",
+    "Assets/Images/FastMetro_img",
+    "Assets/Images/FastMet.md",
+    "FastMetro",
+    "Assets/Images/SDN.md",
+    "Assets/Images/SDN_img",
+    "5G Core/L'AMF_au_Cœur_du_réseau_5G.md",
+    "Cloud",
+    "5G Core/Résumé.md",
+    "L'AMF.md",
+    "Assets/Images/5GCore_img",
+    "5G Core",
     "Projet.md",
-    "Assets/Images/Carcasonne_img/aleatvsaleat.png",
-    "Assets/Images/Carcasonne_img/Algo_MonteCarlo.png",
     "2026-02-03.md",
     "Untitled.base",
     "Untitled.canvas",
-    "Assets/Images/Carcasonne_img/exemplepartie.png",
-    "Assets/Images/Carcasonne_img/bordurefils.png",
     "Assets/Images/Carcasonne_img/ALEATvsALEAT.pdf",
-    "Assets/Images/Carcasonne_img/MINIMAXvsMINIMAX.pdf",
-    "Assets/Images/Carcasonne_img/MINIMAXvsALEAT.pdf",
-    "aleat.cpp",
-    "Assets/Images/Carcasonne_img/reseautuiles.png",
-    "Assets/Images/Carcasonne_img/tuilelink.png",
-    "Assets/Images/Carcasonne_img/tuileelement.png",
-    "Assets/Images/Carcasonne_img/tuilebordure.png",
-    "Assets/Images/Carcasonne_img/Algo_AlphaBeta.png",
-    "Assets/Images/Carcasonne_img",
-    "Assets/Images/HomeLab_img",
-    "Assets/Images/Untitled.md",
-    "Carcassonne",
     "[DuckStore.md",
     "Assets/Untitled.md",
     "Untitled.md",
-    "Assets/Images",
-    "Assets",
     "create a link.md"
   ]
 }
